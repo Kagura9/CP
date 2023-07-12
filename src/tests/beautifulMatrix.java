@@ -5,16 +5,11 @@ import static java.lang.Math.abs;
 public class beautifulMatrix {
     public static void main(String[] args) {
         for(int o = 1; o < 25; o++) {
-        int w = Integer.parseInt(args[o]);
-            int result;
-            for (int i = 0; i < 5; i++) {
-                for (int k = 0; k < 5; k++) {
-                    if (w > 0) {
-                        result = abs(i - 3) + abs(k - 3);
-                        System.out.println(result);
+                    if (Integer.parseInt(args[o])> 0) {
+                        int row = (int) Math.ceil(o/5);
+                        int col = o % 5;
+                        System.out.println(abs(row - 2) + abs(col - 2));
                     }
-                }
-            }
         }
     }
 }
